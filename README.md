@@ -25,3 +25,11 @@ You can install the Python dependencies with:
 
 ```bash
 pip install Pillow matplotlib inference_sdk
+```
+
+## RaspberryPI Package installation
+- sudo apt update
+- sudo apt upgrade
+- python3 -m venv venv_name
+- venv_name/bin/activate
+- venv_name/bin/pip install package
