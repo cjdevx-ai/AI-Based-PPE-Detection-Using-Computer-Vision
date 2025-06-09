@@ -234,6 +234,7 @@ class AuthorizedAccessScreen(Screen):
 
         if hardhat and vest and gloves:
             self.label.text = "✅ Access Granted: Complete PPE Detected"
+            door_status_ref.set(1)  # <--- Added this line to set door_status to 1
             Clock.schedule_once(lambda dt: setattr(self.manager, 'current', 'ppe_image'), 2)
         else:
             self.label.text = "❌ Incomplete PPE. Retrying..."
