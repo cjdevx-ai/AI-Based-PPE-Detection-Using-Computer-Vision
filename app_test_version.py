@@ -272,6 +272,7 @@ class PPEImageScreen(Screen):
         label = Label(text="Complete PPE: Access Granted!", font_size=20)
         layout.add_widget(label)
         self.add_widget(layout)
+        door_status_ref.set(1)  # ✅ Set door_status to 1 when entering the screen
         Clock.schedule_once(self.reset_front_and_go_idle, 10)
 
     def reset_front_and_go_idle(self, dt):

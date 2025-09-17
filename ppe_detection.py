@@ -3,17 +3,17 @@ from PIL import Image, ImageDraw, ImageFont
 import matplotlib.pyplot as plt
 
 # Load the image
-image_path = "ppe_img/1.png"
+image_path = "ppe_capture.jpg"
 image = Image.open(image_path).convert("RGB")
 
 # Initialize Roboflow client
 CLIENT = InferenceHTTPClient(
     api_url="https://serverless.roboflow.com",
-    api_key="3ns6My7tImEr3ucCOx4N"
+    api_key="ipRXafHM2fxthdHpXUSC"
 )
 
 # Run inference
-result = CLIENT.infer(image_path, model_id="ppe-detection-gwowu/1")
+result = CLIENT.infer(image_path, model_id="ppe-ukjvg/2")
 
 # Prepare for drawing
 draw = ImageDraw.Draw(image, "RGBA")
